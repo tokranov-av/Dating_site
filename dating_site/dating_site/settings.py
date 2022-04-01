@@ -109,12 +109,12 @@ REST_FRAMEWORK = {
     ],
 }
 
-
+# djoser
 DJOSER = {
     'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
     'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': '#/activate/{uid}/{token}',
-    'SEND_ACTIVATION_EMAIL': True,
+    'SEND_ACTIVATION_EMAIL': False,  # Подтверждение email при регистрации
     'SERIALIZERS': {
         'user_create': 'app_dating_site.serializers.UserCreateSerializer',
     },
@@ -125,8 +125,8 @@ DJOSER = {
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'artur.tokranov888@gmail.com'
-EMAIL_HOST_PASSWORD = 'Djangopochta01'
+EMAIL_HOST_USER = 'Здесь должен быть email'
+EMAIL_HOST_PASSWORD = 'Здесь должен быть пароль от email'
 
 # Celery
 REDIS_HOST = 'localhost'

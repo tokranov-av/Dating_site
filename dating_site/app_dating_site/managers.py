@@ -2,9 +2,7 @@ from django.contrib.auth.models import BaseUserManager
 
 
 class MyUserManager(BaseUserManager):
-    """Менеджер пользователя.
-    """
-
+    """Менеджер пользователя."""
     def create_user(self, email, password=None, **extra_fields):
         if password is None:
             raise TypeError('Пароль должен быть установлен')
