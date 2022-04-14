@@ -34,6 +34,3 @@ python manage.py runserver
 ```commandline
 celery -A dating_site worker --loglevel=info -P solo
 ```
-```commandline
-celery -A dating_site beat --loglevel=info
-```
